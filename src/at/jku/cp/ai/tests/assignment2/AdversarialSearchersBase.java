@@ -35,7 +35,7 @@ public abstract class AdversarialSearchersBase
 		this.depth = depth;
 		
 		// TODO: in case you are wondering, what's going on, set this to 'true'
-		this.verbose = false;
+		this.verbose = true;
 	}
 
 	static Function<Node, Double> testEvalFunction = new Function<Node, Double>()
@@ -54,6 +54,8 @@ public abstract class AdversarialSearchersBase
 				else if (winner == 1)
 					points += -(10000 - board.getTick());
 			}
+//			System.out.println("winner is "+ winner + " "+points);
+
 			return points;
 		}
 	};

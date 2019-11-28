@@ -38,32 +38,19 @@ public class MinMaxSearch implements AdversarialSearch {
 										.max(Comparator.comparing(node -> minValue(1,node)))
 										.orElseThrow(NoSuchElementException::new);
 		return new Pair<> (res, minValue(1,res));
-
-//		return new Pair<Node, Double>(start, 0d);
 	}
 
 	private double maxValue(int depth, Node state) {
-		System.out.println("Running maxValue");
-		System.out.println(depth);
-//		System.out.println(state);
-		if(!searchLimitingPredicate.test(depth, state)) return evalFunction.apply(state);
-		List<Node> adj = state.adjacent();
-		if(adj.isEmpty()) return evalFunction.apply(state);
-		return evalFunction.apply(adj.stream()
-				.max(Comparator.comparing(node -> minValue(depth+1, node)))
-				.orElseThrow(NoSuchElementException::new));
+		if(!searchLimitingPredicate.test(depth, state) || state.isLeaf()) return evalFunction.apply(state);
+		return state.adjacent().stream().map(node -> minValue(depth+1, node))
+				.max(Double::compare).orElseThrow(NoSuchElementException::new);
 	}
 
 	private double minValue(int depth, Node state) {
-		System.out.println("Running minValue");
-		System.out.println(depth);
-//		System.out.println(state);
-		if(!searchLimitingPredicate.test(depth, state)) return evalFunction.apply(state);
-		System.out.println("asd");
-		List<Node> adj = state.adjacent();
-		if(adj.isEmpty()) return evalFunction.apply(state);
-		return evalFunction.apply(adj.stream()
-			   .min(Comparator.comparing(node -> maxValue(depth+1, node)))
-			   .orElseThrow(NoSuchElementException::new));
+		if(!searchLimitingPredicate.test(depth, state) || state.isLeaf()) return evalFunction.apply(state);
+
+		return state.adjacent().stream().map(node -> maxValue(depth+1, node))
+				.min(Double::compare).orElseThrow(NoSuchElementException::new);
+
 	}
 }
