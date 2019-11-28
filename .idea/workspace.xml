@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c24c7cd2-fa84-4077-8c67-b8ad674d15a7" name="Default Changelist" comment="" />
+    <list default="true" id="c24c7cd2-fa84-4077-8c67-b8ad674d15a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/at/jku/cp/ai/search/algorithms/MinMaxSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/at/jku/cp/ai/search/algorithms/MinMaxSearch.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UEqumqGcWVl3JHY7fNBsPmkPxS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
@@ -25,6 +34,46 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="JUnit.TestMinMax">
+    <configuration name="TestMinMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rau-exercise-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.jku.cp.ai.tests.assignment2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.jku.cp.ai.tests.assignment2" />
+      <option name="MAIN_CLASS_NAME" value="at.jku.cp.ai.tests.assignment2.TestMinMax" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMinMax.testMinMaxMAX" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rau-exercise-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.jku.cp.ai.tests.assignment2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.jku.cp.ai.tests.assignment2" />
+      <option name="MAIN_CLASS_NAME" value="at.jku.cp.ai.tests.assignment2.TestMinMax" />
+      <option name="METHOD_NAME" value="testMinMaxMAX" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="[0]" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestMinMax" />
+        <item itemvalue="JUnit.TestMinMax.testMinMaxMAX" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -35,11 +84,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574932326099</updated>
-      <workItem from="1574932328534" duration="290000" />
+      <workItem from="1574932328534" duration="4362000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
