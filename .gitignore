@@ -1,0 +1,7 @@
+.classpath
+.project
+.settings
+*.class
+build.xml
+bin/
+junit
