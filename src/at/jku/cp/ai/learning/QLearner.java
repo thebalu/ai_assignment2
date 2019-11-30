@@ -54,11 +54,19 @@ public class QLearner
 		// for e in (0 .. number_of_episodes):
 		//     while not (goal reached):
 		//         ...
-	
+
+		IBoard curr, prev;
 		for (int episode = 0; episode < numEpisodes; episode++)
 		{
-			// TODO: put your implementation here	
-			
+			curr = board.copy();
+
+			while(curr.isRunning()) {
+				Move next = getRandomMove(curr);
+				prev = curr.copy();
+				curr.executeMove(next);
+				qmatrix.put(new Pair<>(prev, next), getReward(curr) + discountFactor * getMaxQValue(curr));
+			}
+
 		}
 	}
 
@@ -86,6 +94,13 @@ public class QLearner
 		}
 
 		return bestMove;
+	}
+
+	private Move getRandomMove(IBoard board)
+	{
+		List<Move> moves = board.getPossibleMoves();
+
+		return moves.get(random.nextInt(moves.size()));
 	}
 	
 	public double getReward(IBoard board)

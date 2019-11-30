@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c24c7cd2-fa84-4077-8c67-b8ad674d15a7" name="Default Changelist" comment="">
+    <list default="true" id="c24c7cd2-fa84-4077-8c67-b8ad674d15a7" name="Default Changelist" comment="implement alphabeta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/at/jku/cp/ai/learning/QLearner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/at/jku/cp/ai/learning/QLearner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/at/jku/cp/ai/search/algorithms/AlphaBetaSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/at/jku/cp/ai/search/algorithms/AlphaBetaSearch.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,7 +48,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestAlphaBeta">
+  <component name="RunManager" selected="JUnit.TestQLearner">
     <configuration name="TestAlphaBeta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rau-exercise-2" />
       <extension name="coverage">
@@ -59,25 +60,6 @@
       <option name="PACKAGE_NAME" value="at.jku.cp.ai.tests.assignment2" />
       <option name="MAIN_CLASS_NAME" value="at.jku.cp.ai.tests.assignment2.TestAlphaBeta" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestMinMax (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rau-exercise-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="at.jku.cp.ai.tests.assignment2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="at.jku.cp.ai.tests.assignment2" />
-      <option name="MAIN_CLASS_NAME" value="at.jku.cp.ai.tests.assignment2.TestMinMax" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <option name="PARAMETERS" value="[8]" />
-      <patterns>
-        <pattern testClass="at.jku.cp.ai.tests.assignment2.TestMinMax" />
-      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,7 +98,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMinMax.testMinMaxMAX (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestQLearner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rau-exercise-2" />
       <extension name="coverage">
         <pattern>
@@ -125,21 +107,35 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="at.jku.cp.ai.tests.assignment2" />
-      <option name="MAIN_CLASS_NAME" value="at.jku.cp.ai.tests.assignment2.TestMinMax" />
-      <option name="METHOD_NAME" value="testMinMaxMAX" />
+      <option name="MAIN_CLASS_NAME" value="at.jku.cp.ai.tests.assignment2.TestQLearner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestQLearner.simplest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rau-exercise-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.jku.cp.ai.tests.assignment2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.jku.cp.ai.tests.assignment2" />
+      <option name="MAIN_CLASS_NAME" value="at.jku.cp.ai.tests.assignment2.TestQLearner" />
+      <option name="METHOD_NAME" value="simplest" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="PARAMETERS" value="[2]" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestQLearner" />
+        <item itemvalue="JUnit.TestQLearner.simplest" />
         <item itemvalue="JUnit.TestAlphaBeta" />
         <item itemvalue="JUnit.TestMinMax" />
         <item itemvalue="JUnit.TestMinMax (2)" />
-        <item itemvalue="JUnit.TestMinMax (1)" />
-        <item itemvalue="JUnit.TestMinMax.testMinMaxMAX (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +149,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574932326099</updated>
-      <workItem from="1574932328534" duration="11581000" />
+      <workItem from="1574932328534" duration="13193000" />
+      <workItem from="1575105317875" duration="3585000" />
     </task>
     <task id="LOCAL-00001" summary="implement minmax">
       <created>1574936769004</created>
@@ -169,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574942599683</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="implement alphabeta">
+      <created>1574943929959</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574943929960</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +184,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -189,6 +195,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implement minmax" />
     <MESSAGE value="make it work" />
-    <option name="LAST_COMMIT_MESSAGE" value="make it work" />
+    <MESSAGE value="implement alphabeta" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement alphabeta" />
   </component>
 </project>

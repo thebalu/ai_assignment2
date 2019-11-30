@@ -52,8 +52,6 @@ public class AlphaBetaSearch implements AdversarialSearch {
 			alpha = max(alpha,v);
 		}
 		return v;
-//		return state.adjacent().stream().map(node -> minValue(depth+1, node, alpha ,beta ))
-//				.max(Double::compare).orElseThrow(NoSuchElementException::new);
 	}
 
 	private double minValue(int depth, Node state, double alpha, double beta) {
@@ -68,8 +66,5 @@ public class AlphaBetaSearch implements AdversarialSearch {
 			beta = min(beta,v);
 		}
 		return v;
-//		return state.adjacent().stream().map(node -> maxValue(depth+1, node, alpha, beta))
-//				.min(Double::compare).orElseThrow(NoSuchElementException::new);
-
 	}
 }
